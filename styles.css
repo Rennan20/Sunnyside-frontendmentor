@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+/* Primary */
+:root {
+  --soft-red: hsl(7, 99%, 70%);
+  --var-yellow: hsl(51, 100%, 49%);
+  --dark-desaturated-cyan: hsl(167, 40%, 24%); /* (graphic design text) */
+  --dark-blue: hsl(198, 62%, 26%); /*  (photography text) */
+  --dark-moderate-cyan: hsl(168, 34%, 41%); /* (footer) */
+
+  /* Neutral */
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+
+  --font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+}
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+header {
+  background-color: #3ebfff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.header-links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-left: auto;
+  font-size: var(--font-size);
+  color: var(--white);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+}
+
+header h3:last-child {
+  background-color: var(--white);
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  color: black;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.hero {
+  background-image: url("./images/desktop/image-header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.arrow-down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 164px;
+}
+
+.hero h1 {
+  color: var(--white);
+  text-align: center;
+  font-size: 64px;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  height: fit-content;
+}
+
+.card {
+  background-color: var(--white);
+  display: flex;
+}
+
+#card1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px;
+  gap: 2rem;
+}
+
+#card1 h1 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  text-align: left;
+  font-size: 2.75rem;
+  color: var(--very-dark-desaturated-blue);
+}
+
+#card1 p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: var(--font-size);
+  color: var(--grayish-blue);
+}
+
+.button1 {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  color: var(--very-dark-desaturated-blue);
+  font-weight: 900;
+  font-family: "Fraunces", sans-serif;
+  font-size: var(--font-size);
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 0.325rem 0.625rem;
+}
+
+.button1 span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background-color: var(--var-yellow);
+  border-radius: 1rem;
+  opacity: 0.3;
+}
+
+.button1:hover span {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.button2 {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  color: var(--very-dark-desaturated-blue);
+  font-weight: 900;
+  font-family: "Fraunces", sans-serif;
+  font-size: var(--font-size);
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 0.325rem 0.625rem;
+}
+
+.button2 span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background-color: var(--soft-red);
+  border-radius: 1rem;
+  opacity: 0.3;
+}
+
+.button2:hover span {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.second-card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./images/desktop/image-graphic-design.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.second-card1 h1 {
+  font-weight: 900;
+  font-family: "Fraunces", sans-serif;
+  font-size: 32px;
+  color: var(--dark-desaturated-cyan);
+  margin-top: 30%;
+}
+
+.second-card1 p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: var(--font-size);
+  color: var(--dark-desaturated-cyan);
+  margin-top: 2.75rem;
+  text-align: center;
+}
+
+.second-card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./images/desktop/image-photography.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.second-card2 h1 {
+  font-weight: 900;
+  font-family: "Fraunces", sans-serif;
+  font-size: 32px;
+  color: var(--dark-blue);
+  margin-top: 30%;
+}
+
+.second-card2 p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: var(--font-size);
+  color: var(--dark-blue);
+  margin-top: 2.75rem;
+  text-align: center;
+}
+
+.card img,
+.second-card1,
+.second-card2,
+.images img {
+  max-width: 100%;
+  height: auto;
+}
